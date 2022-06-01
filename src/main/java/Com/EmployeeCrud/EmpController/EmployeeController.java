@@ -26,6 +26,25 @@ public class EmployeeController
 	
 		return employeeservice.add(employee);
 	}
+	@GetMapping("/findAll")
+	public List<Employee> findAllemps() {
+		return employeeservice.findAll();
+	}
+	
+	@GetMapping("/findById/{id}")
+	public Employee findEmpById(@PathVariable int id) {
+		return employeeservice.findById(id);
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String deleteEmpById(@PathVariable int id) {
+		return employeeservice.delete(id);
+	}
+	
+	@PutMapping("/update")
+	public String update(@RequestBody Employee employee) {
+		return employeeservice.update(employee);
+	}
 
 	
 }
