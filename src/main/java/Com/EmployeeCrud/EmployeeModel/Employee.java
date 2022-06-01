@@ -9,6 +9,13 @@ public class Employee
 		super();
 		
 	}
+	public Employee(int empid, String empname, int salary) {
+		super();
+		this.empid = empid;
+		this.empname = empname;
+		this.salary = salary;
+	}
+
 	public int getEmpid() {
 		return empid;
 	}
@@ -27,12 +34,7 @@ public class Employee
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public Employee(int empid, String empname, int salary) {
-		super();
-		this.empid = empid;
-		this.empname = empname;
-		this.salary = salary;
-	}
+	
 	@Override
 	public String toString() {
 		return "Employee [empid=" + empid + ", empname=" + empname + ", salary=" + salary + "]";
